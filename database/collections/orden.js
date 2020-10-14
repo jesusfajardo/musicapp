@@ -4,9 +4,7 @@ const Schema = mongoose.Schema;
 
 var ordenSchema = new Schema({
 
-  //Idmenus : {type: Schema.ObjectId, ref: "menus"},
-  //Idrestaurant: {type: Schema.ObjectId, ref: "restaurant"},
-  //Idcliente : {type: Schema.ObjectId, ref: "cliente"},
+  
   cliente: {
   type: Schema.Types.ObjectId,
   ref: "Cliente"

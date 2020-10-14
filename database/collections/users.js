@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 const usersSchema =  Schema({
     Nombre:  {
         type: String,
-        required: [true, 'debe poner un nombre']
+        required: [true, 'introduzca un nombre']
     },
     Ci: {
         type: String,
@@ -18,7 +18,7 @@ const usersSchema =  Schema({
         required: 'Falta el Email',
         match: /^(([^<>()\[\]\.,;:\s @\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,
     },
-    Password: String,
+    Password: String
 
     Fecha_Registro: {
         type: Date,
