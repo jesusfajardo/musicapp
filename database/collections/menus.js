@@ -18,7 +18,6 @@ var menusSchema = Schema({
     },
     foto: String
 })
-//Nombre, precio, descripción, fechaderegistro, fotografía del producto
-
+//aqui mostramos Nombre, precio, descripción, fechaderegistro, fotografía del producto
 const menus = mongoose.model("Menus", menusSchema);
 module.exports = menus;
