@@ -235,13 +235,7 @@ router.get(/restaurant\/[a-z0-9]{1,}$/, (req, res) => {
   })
 });
 //elimina un restaurant
-/*router.delete(/restaurant\/[a-z0-9]{1,}$/, verifytoken, (req, res) => {
-  var url = req.url;
-  var id = url.split("/")[2];
-  Restaurant.find({_id : id}).remove().exec( (err, docs) => {
-      res.status(200).json(docs);
-  });
-});*/
+
 router.delete('/restaurant/:id',  (req, res, )=> {
   var idRestaurant = req.params.id;
 

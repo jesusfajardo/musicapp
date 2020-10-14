@@ -18,7 +18,7 @@ const usersSchema =  Schema({
         required: 'Falta el Email',
         match: /^(([^<>()\[\]\.,;:\s @\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,
     },
-    Password: String
+    Password: String,
 
     Fecha_Registro: {
         type: Date,

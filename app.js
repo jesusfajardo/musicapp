@@ -41,7 +41,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 module.exports = app;
-var port = 7777;
+var port = 8000;
 app.listen(port, () => {
   console.log("server running in " + port);
 });
