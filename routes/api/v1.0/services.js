@@ -719,7 +719,9 @@ router.put(/orden\/[a-z0-9]{1,}$/, (req, res) => {
       return;
   });
 });
-/* */
+/* 
+
+*/
 //insertar datos de] menu
 router.post("/detalle",  (req, res) => {
 
