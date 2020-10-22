@@ -41,7 +41,10 @@ const fileFilter = (req, file, cb) => {
 
 const upload = multer({
   storage: storage,
-  
+  //fileFilter: fileFilter,
+  /*limits: {
+      fileSize: 1024 * 1024 * 5
+  }*/
 })
 
 /*
@@ -310,7 +313,6 @@ router.put(/restaurant\/[a-z0-9]{1,}$/, verifytoken,(req, res) => {
       return;
   });
 });
-<<<<<<< HEAD
 /*RESTAURANT*/
 
 router.post("/menus", (req, res) => {
@@ -465,8 +467,6 @@ router.put(/menus\/[a-z0-9]{1,}$/, (req, res) => {
   });
 });
 
-=======
->>>>>>> 49da9ebff12f62510433c7d3c7204b053ae2504b
 router.post("/cliente",  (req, res) => {
 
 
@@ -719,10 +719,7 @@ router.put(/orden\/[a-z0-9]{1,}$/, (req, res) => {
       return;
   });
 });
-<<<<<<< HEAD
-/**/
-=======
->>>>>>> 49da9ebff12f62510433c7d3c7204b053ae2504b
+/* */
 //insertar datos de] menu
 router.post("/detalle",  (req, res) => {
 
