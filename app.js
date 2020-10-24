@@ -7,6 +7,10 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var service = require('./routes/api/v1.0/services');
+var clientes = require('./routes/api/v1.0/clientes');
+var login = require('./routes/api/v1.0/login');
+var restaurantimg = require('./routes/api/v1.0/estaurantimg');
+const restaurant = require('./database/collections/restaurant');
 var app = express();
 
 // view engine setup
@@ -23,6 +27,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/api/v1.0/', service);
+app.use('/api/v1.0/', clientes);
+app.use('/api/v1.0/', login);
+app.use('/api/v1.0/', restaurantimg);
+app.use('/api/v1.0/', restaurant);
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
