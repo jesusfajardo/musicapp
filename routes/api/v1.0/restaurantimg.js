@@ -30,7 +30,7 @@ router.post(/restaurantimg\/[a-z0-9]{1,}$/, (req, res) => {
           idrestaurant: req.body.idrestaurant,
           name : req.file.originalname,
           physicalpath: req.file.path,
-          relativepath: "http://192.168.1.15:8000" + ruta
+          relativepath: "http://192.168.1.5:8000" + ruta
         };
         var imgData = new Img(img);
         imgData.save().then( (infoimg) => {

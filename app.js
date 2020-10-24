@@ -6,11 +6,12 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var service = require('./routes/api/v1.0/services');
+var services = require('./routes/api/v1.0/services');
 var clientes = require('./routes/api/v1.0/clientes');
-var login = require('./routes/api/v1.0/login');
-var restaurantimg = require('./routes/api/v1.0/estaurantimg');
-const restaurant = require('./database/collections/restaurant');
+
+var restaurantimg = require('./routes/api/v1.0/restaurantimg');
+var restaurant = require('./routes/api/v1.0/restaurant');
+
 var app = express();
 
 // view engine setup
@@ -26,9 +27,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/api/v1.0/', service);
+app.use('/api/v1.0/', services);
 app.use('/api/v1.0/', clientes);
-app.use('/api/v1.0/', login);
+
 app.use('/api/v1.0/', restaurantimg);
 app.use('/api/v1.0/', restaurant);
 

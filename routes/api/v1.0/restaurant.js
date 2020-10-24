@@ -111,45 +111,6 @@ router.post("/restaurant", (req, res) => {
         return;
     });
   });
-  //Actualiza los datos del restaurant 
-  router.put(/restaurant\/[a-z0-9]{1,}$/, verifytoken,(req, res) => {
-    var url = req.url;
-    var id = url.split("/")[2];
-    var keys  = Object.keys(req.body);
-    var oficialkeys = ['nombre', 'nit', 'propiedad', 'calle', 'telefono', 'lat', 'lon'];
-    var result = _.difference(oficialkeys, keys);
-    if (result.length > 0) {
-      res.status(400).json({
-        "msn" : "error nose puede  actualizar  utilice patch  para la actualizar"
-      });
-      return;
-    }
-  
-    var restaurant = {
-      nombre : req.body.Nombre,
-      nit : req.body.Nit,
-      propiedad : req.body.Propiedad,
-      calle : req.body.Calle,
-      telefono : req.body.Telefono,
-      lat : req.body.Lat,
-      lon : req.body.Lon
-  
-    };
-    Restaurant.findOneAndUpdate({_id: id}, restaurant, (err, params) => {
-        if(err) {
-          res.status(500).json({
-            "msn": "Error no se pudo actualizar los datos"
-          });
-          return;
-        }
-        res.status(200).json({
-          "resp": 200,
-          "dato": restaurant,
-          "msn" :  "restaurant editado con exito"
-        });
-        return;
-    });
-  });
-  /*RESTAURANT*/
+  //Actualiza los datos del restaurant
 
   module.exports = router;
