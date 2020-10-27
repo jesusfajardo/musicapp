@@ -6,12 +6,8 @@ var _ = require("underscore");
 
 var Img = require("../../../database/collections/img");
 
-var Menus = require("../../../database/collections/../../database/collections/menus");
-var Orden = require("../../../database/collections/../../database/collections/orden");
 var Restaurant = require("../../../database/collections/../../database/collections/restaurant");
-var Cliente = require("../../../database/collections/../../database/collections/cliente");
-var Users = require("../../../database/collections/../../database/collections/users");
-var Detalle = require("../../../database/collections/../../database/collections/detalle");
+
 
 //CRUD Create, Read, Update, Delete
 //Creation of users
@@ -30,7 +26,7 @@ router.post(/restaurantimg\/[a-z0-9]{1,}$/, (req, res) => {
           idrestaurant: req.body.idrestaurant,
           name : req.file.originalname,
           physicalpath: req.file.path,
-          relativepath: "http://192.168.1.5:8000" + ruta
+          relativepath: "http://192.168.1.15:8000" + ruta
         };
         var imgData = new Img(img);
         imgData.save().then( (infoimg) => {
