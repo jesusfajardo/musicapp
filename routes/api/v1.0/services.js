@@ -3,14 +3,11 @@ const multer = require('multer');
 var router = express.Router();
 var fs = require('fs');
 var _ = require("underscore");
-
-var Img = require("../../../database/collections/img");
-
 var Menus = require("../../../database/collections/../../database/collections/menus");
 var Orden = require("../../../database/collections/../../database/collections/orden");
-var Restaurant = require("../../../database/collections/../../database/collections/restaurant");
+
 var Cliente = require("../../../database/collections/../../database/collections/cliente");
-var Users = require("../../../database/collections/../../database/collections/users");
+
 var Detalle = require("../../../database/collections/../../database/collections/detalle");
 
 var jwt = require("jsonwebtoken");
