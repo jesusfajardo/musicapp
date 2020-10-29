@@ -33,7 +33,7 @@ const fileFilter = (req, file, cb) => {
   if (file.mimetype === 'image/png' || file.mimetype === 'image/jpeg') {
       return cb(null, true);
   }
-  return cb(new Error('Solo se admiten imagenes png y jpg jpeg'));
+  return cb(new Error('Solo se admiten imagenes png y jpeg'));
 }
 
 const upload = multer({
